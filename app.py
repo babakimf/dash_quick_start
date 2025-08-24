@@ -9,6 +9,7 @@ df2 = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapm
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = Dash(external_stylesheets=external_stylesheets)
+server = app.server
 
 app.layout = dbc.Row(
     dmc.Container(
@@ -40,4 +41,4 @@ def update_graph2(col_chosen):
     return fig
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
